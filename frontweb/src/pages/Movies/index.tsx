@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
 
+
 const Home = () => {
+
   return (
     <div className="movies-container">
       <div className="movies-banner-container">

@@ -9,3 +9,26 @@
   letter-spacing: -0.015em;
   color: #000000;
 }
+
+.nav-logout {
+  color: #000;
+  font-size: 14px;
+  margin-right: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
+
+.nav-label {
+  padding-top: 4px;
+}
+
+@media (min-width: 1200px) {
+  .nav-logout {
+    margin-right: 70px;
+  }
+}
+

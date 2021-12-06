@@ -1,0 +1,40 @@
+.review-info-card {
+  padding: 20px 10px 0 10px;
+  margin: 20px;
+  font-size: 16px;
+  background-color: #6c6c6c;
+  height: 100%;
+  width: 90%;
+}
+
+.info-name-card {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.info-name-card h6 {
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.info-review-card {
+  border: 1px solid #e1e1e1;
+  margin-bottom: 25px;
+  padding: 0 10px 0 10px;
+}
+
+.info-review-card p {
+  font-size: 16px;
+  color: #9e9e9e;
+  padding: 10px 0 0 10px;
+}
+
+@media (min-width: 576px) {
+  .rewiew-card {
+    padding: 50px 30px 10px 30px;
+  }
+}
