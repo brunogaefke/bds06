@@ -19,7 +19,9 @@ const MovieDetails = () => {
       <div className="movies-details-banner-container">
         <h1>Tela detalhes do filme id: {movieId}</h1>
         {hasAnyRoles(['ROLE_MEMBER']) && <ReviewCard movieId={movieId} />}
+        <div className="review-container">
         <ReviewComment movieId={movieId} />
+        </div>
         </div>)
       </div>
   );

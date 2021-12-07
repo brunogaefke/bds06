@@ -3,7 +3,7 @@ import ReviewInfoCard from 'components/ReviewInfoCard';
 import { useEffect, useState } from 'react';
 import { Review } from 'types/review';
 import { BASE_URL, requestBackend } from 'util/requests';
-import './styles.css';
+
 
 type Props = {
   movieId: string;
@@ -24,7 +24,7 @@ const Comment = ({ movieId }: Props) => {
   }, [movieId]);
 
   return (
-    <div className="base-card comment-card">
+    <div>
       {review?.map((item) => (
         <div key={item.id}>
           <ReviewInfoCard name={item.user.name} text={item.text} />

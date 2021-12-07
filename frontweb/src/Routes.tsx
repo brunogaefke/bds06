@@ -3,24 +3,20 @@ import Home from 'pages/Home';
 import Navbar from 'components/Navbar/Index';
 import history from 'util/history';
 import PrivateRoute from 'components/PrivateRoute';
-import Movies from 'pages/Movies';
-import MovieDetails from 'pages/MoviesDetails';
+import MoviesRoutes from 'pages/MoviesRoutes';
 
 const Routes = () => (
-  <Router history={history}>
-  <Navbar />
-  <Switch>
+    <Router history={history}>
+    <Navbar />
+    <Switch>
     <Route path="/" exact>
-      <Home />
+    <Home />
     </Route>
     <PrivateRoute path="/movies">
-      <Movies />
+    <MoviesRoutes />
     </PrivateRoute>
-    <PrivateRoute path="/movies/:movieId">
-      <MovieDetails />
-    </PrivateRoute>
-  </Switch>
-</Router>
-);
+    </Switch>
+    </Router>
+    );
 
 export default Routes;
