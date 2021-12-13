@@ -37,6 +37,7 @@ const Movies = () => {
   const getProducts = useCallback(() => {
     const config: AxiosRequestConfig = {
       method: "GET",
+      withCredentials: true,
       url: "/movies",
       params: {
         page: controlComponentData.activePage,
