@@ -4,6 +4,7 @@ import ButtonIcon from "components/ButtonIcon";
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 import { requestPostEvaluation } from "util/requests";
+import { toast } from "react-toastify";
 
 
 type Props = {
@@ -27,10 +28,12 @@ const ReviewCard = ({ movieId }: Props) => {
 
     requestPostEvaluation(formData)
       .then((response) => {
+        toast.info('Produto cadastrado com sucesso!')
         setHasError(false);
         window.location.reload();
       })
       .catch((error) => {
+        toast.error('Favor preencher o campo texto!')
         setHasError(true);
       });
   };
