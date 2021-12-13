@@ -11,6 +11,10 @@
   color: #fff;
 }
 
+.movies-catalog-container {
+  display: flex;
+}
+
 @media (min-width: 992px) {
   .movies-container {
     padding: 40px;
