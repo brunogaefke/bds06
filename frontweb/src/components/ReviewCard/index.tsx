@@ -28,12 +28,16 @@ const ReviewCard = ({ movieId }: Props) => {
 
     requestPostEvaluation(formData)
       .then((response) => {
-        toast.info('Produto cadastrado com sucesso!')
+        toast.success('Produto cadastrado com sucesso!', {
+          theme: "dark",
+          });
         setHasError(false);
         window.location.reload();
       })
       .catch((error) => {
-        toast.error('Favor preencher o campo texto!')
+        toast.error('Favor preencher o campo texto!', {
+          theme: "dark",
+          });
         setHasError(true);
       });
   };

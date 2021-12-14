@@ -5,10 +5,8 @@
 .movies-search-container {
   padding: 20px;
   margin-bottom: 10px;
-}
+  background-color: #6C6C6C;
 
-.movies-search-container h1 {
-  color: #fff;
 }
 
 .movies-catalog-container {

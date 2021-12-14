@@ -1,4 +1,24 @@
-.product-filter-category-container {
-    flex: 1;
-    margin-right: 10px;
+
+
+.product-filter-select__control {
+    Width: 260px;
+    Height: 50px;
+}
+
+.product-filter-select__control {
+    font-size: 1em;
+    letter-spacing: -0.015em;
+    color: #263238;
+    background-color: #6C6C6C !important;
+    border: 1px solid #E1E1E1 !important;
+    border-radius: 4px !important;
+
+}
+
+.product-filter-select__placeholder {
+  color: #fff !important;
+}
+
+.product-filter-select__indicator-separator {
+  display: none;
 }

@@ -3,8 +3,9 @@ import "./styles.css";
 import { Genre } from "types/genre";
 import { Controller, useForm } from "react-hook-form";
 import Select from "react-select";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { requestBackend } from "util/requests";
+import { AxiosRequestConfig } from "axios";
 
 export type ProductFilterData = {
   name: string;
@@ -25,7 +26,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
     onSubmitFilter(formData);
   };
 
-  const handleChangeCategory = (value: Genre) => {
+  const handleChangeGenre = (value: Genre) => {
     setValue("genre", value);
 
     const obj: ProductFilterData = {
@@ -36,11 +37,21 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
     onSubmitFilter(obj);
   };
 
+  const getGenres = useCallback(() => {
+  const config: AxiosRequestConfig = {
+    method: 'GET',
+    withCredentials: true,
+    url: "/genres",
+    
+  };
+  requestBackend(config).then((response) => {
+    setSelectGenres(response.data.content);
+  });
+}, []);
+
   useEffect(() => {
-    requestBackend({ url: `/genres` }).then((response) => {
-      setSelectGenres(response.data.content);
-    });
-  }, []);
+      getGenres();
+  }, [getGenres]);
 
   return (
     <form
@@ -56,8 +67,8 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
             options={selectGenres}
             classNamePrefix="product-filter-select"
             isClearable
-            placeholder="Categoria"
-            onChange={(value) => handleChangeCategory(value as Genre)}
+            placeholder="Gênero"
+            onChange={(value) => handleChangeGenre(value as Genre)}
             getOptionLabel={(genre: Genre) => genre.name}
             getOptionValue={(genre: Genre) => String(genre.id)}
           />
