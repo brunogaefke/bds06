@@ -44,7 +44,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
     url: "/genres",
   };
   requestBackend(config).then((response) => {
-    setSelectGenres(response.data.content);
+    setSelectGenres(response.data);
   });
 }, []);
 
