@@ -69,7 +69,7 @@ const Movies = () => {
               key={movie.id}
               className="col-sm-6 col-lg-2 "
             >
-              <Link to="/movies/:movieId">
+              <Link to={`/movies/${movie.id}`}>
               <MoviesCard movie={movie} />
               </Link>
             </div>
