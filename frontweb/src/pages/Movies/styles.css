@@ -1,5 +1,6 @@
 .movies-container {
   padding: 10px;
+  width: 100%;
 }
 
 .movies-search-container {
@@ -7,10 +8,6 @@
   margin-bottom: 10px;
   background-color: #6C6C6C;
 
-}
-
-.movies-catalog-container {
-  display: flex;
 }
 
 @media (min-width: 992px) {

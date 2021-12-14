@@ -62,24 +62,28 @@ const Movies = () => {
         <MoviesFilter onSubmitFilter={handleSubmitFilter} />
       </div>
 
-      <div className="row movies-catalog-container">
+      <div className="row movies-catalog-container ">
         {page?.content.map((movie) => (
-          <Link to="/movies/1">
+          
             <div
               key={movie.id}
-              className="col-sm-6 col-lg-2 movies-catalog-container "
+              className="col-sm-6 col-lg-2 "
             >
+              <Link to="/movies/:movieId">
               <MoviesCard movie={movie} />
+              </Link>
             </div>
-          </Link>
+          
         ))}
       </div>
+      <div>
       <Pagination
         forcePage={page?.number}
         pageCount={page ? page?.totalPages : 0}
         range={3}
         onChange={handlePageChange}
       />
+      </div>
     </div>
   );
 };

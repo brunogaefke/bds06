@@ -19,7 +19,7 @@ const MoviesCard = ({ movie } : Props) => {
                 <h3>{movie.year}</h3>
                 <h6>{movie.subTitle}</h6>
             </div>
-        </div>
+            </div>
     );
 }
 

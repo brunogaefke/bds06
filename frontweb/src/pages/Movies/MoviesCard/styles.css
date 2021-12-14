@@ -1,5 +1,6 @@
 .movie-card {
-    padding-top: 25px;
+    padding-top: 15px;
+    margin-bottom: 30px;;
 }
 
 .card-top-container img {
@@ -32,3 +33,23 @@
     color: #fff;
 }
 
+@media (min-width: 576px) {
+    .movie-card {
+        min-height: 300px;
+        margin-right: 20 px;
+    }
+}
+
+@media (min-width: 768px) {
+    .movie-card {
+        min-height: 380px;
+    }
+}
+
+@media (min-width: 992px) {
+    .movie-card {
+        min-height: 322px;
+        
+        
+    }
+}

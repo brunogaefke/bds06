@@ -42,7 +42,6 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
     method: 'GET',
     withCredentials: true,
     url: "/genres",
-    
   };
   requestBackend(config).then((response) => {
     setSelectGenres(response.data.content);
